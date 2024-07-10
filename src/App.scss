@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+$white-1: #ccc8c8;
+$white-2: #f6f5f5;
+$white-3: #e7e4e4;
+$blur-black-1: #000000d0;
+$gray-1: #dedede;
+$red-1: #5b0204;
+$red-2: #981212;
+$gray-2: rgba(245, 244, 244, 0.44);
+
+.fade {
+  filter: grayscale(75%);
+  transition: filter 250ms ease-in-out; 
+  &:hover {
+    filter: grayscale(0%);
+  }
+}
+
+.click:hover {
+  cursor: pointer;
+}
+
+.Button:hover {
+  cursor: pointer;
+}
+
+.anormal {
+  text-align: left !important;
+}
+
+a {
+  display: block;
+  color: $blur-black-1;
+  text-align: center;
+  text-decoration: none;
+}
+
+.leaflet-container {
+  height: 300px;
+  width: 100%;
+  z-index: 0;
+}
+
+.App {
+  text-align: center;
+
+  .DesktopHeader {
+
+    .MenuOpen:hover {
+      cursor: pointer;
+    }
+
+    .MenuOpen {
+      background-color: #e7e4e4d0;
+      padding: 15px;
+      border-bottom-right-radius: 15px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 110;
+    }
+
+    .Language:hover {
+      cursor: pointer;
+    }
+
+    .LogoName {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .LandingPage {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    position: fixed;
+
+    .Logo {
+      position: absolute;
+      max-width: 50vw;
+    }
+
+    .BackgroundImage {
+      background-color: white;
+      background-repeat: no-repeat, repeat;
+      background-position: center;
+      background-size: cover;
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+      z-index: -1;
+    }
+
+  }
+
+  .HomeBody {
+
+    .Success {
+      background-color: $gray-2;
+      border-radius: 10px;
+      padding: 10px;
+      margin-left: 10vw;
+      margin-right: 10vw;
+
+      .SuccessItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .Card {
+        float: right;
+      }
+    }
+
+  }
+
+  .NewsBody {
+
+    .NewsBox {
+
+      .Avatar {
+        position: absolute;
+        z-index: 1;
+        margin: 10px;
+      }
+
+    }
+  }
+
+  .HomeBody, .TrainerBody, .VorstandBody, .WeiteresBody, .NewsBody {
+    box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 85vh;
+    position: absolute;
+    background-color: $white-3;
+    width: 100vw;
+    z-index: 100;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+  }
+
+  .TrainerBody {
+    .OfferCard {
+      border: 2px solid black;
+    }
+  }
+
+  .VorstandBody {
+    .MyCard {
+      width: 450px;
+    }
+  }
+
+  .Footer {
+    width: 100vw;
+
+    .languageChooser {
+      z-index: 999 !important;
+    }
+
+    .languageChooser:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .App .LandingPage .Logo {
+    max-width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .App {
+    .VorstandBody {
+      .MyCard {
+        width: 350px;
+      }
+    }
+  }
+}
